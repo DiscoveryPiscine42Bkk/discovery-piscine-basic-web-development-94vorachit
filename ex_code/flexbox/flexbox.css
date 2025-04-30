@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+  body,html {
+    margin:0;
+    height: 100vh;
+  }
+  body {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  .container {
+    border: 7px solid #999;
+    height: 200px;
+    width: 500px;
+    background-color: lightgreen;
+    display: flex;
+  }
+  .left, .right {
+    height: 100%;
+    transition: all 0.5s;
+    flex: 0 1 50%;
+  }
+  
+  .left:hover, .right:hover {
+    flex: 1 0 100%;
+  }
+  
+  .left {
+    background-color: lightsalmon;
+  }
+  
+  .right {
+    background-color: mediumpurple;
+  }
