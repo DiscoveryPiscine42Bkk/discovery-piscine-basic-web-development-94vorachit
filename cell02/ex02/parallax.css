@@ -1,0 +1,14 @@
+  body, html{
+    height: 100%;
+  }
+  .parallax{
+    background-image: url(https://www.shutterstock.com/image-photo/kitten-head-paws-peeking-over-600nw-1869172456.jpg);
+  }
+  .center{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    
+  }
