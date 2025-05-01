@@ -1,15 +1,38 @@
-const circleColor = document.getElementById("circle");
+const circle = document.getElementById("circle");
 const colors = [`red`, `green`, `blue`];
 let colorIndex = 0;
-circleColor.addEventListener("click", function() {
+
+let currentWidth = document.getElementById("circle").offsetWidth
+let currentHeight = document.getElementById("circle").offsetHeight
+
+circle.addEventListener("click", function() {
     circle.style.backgroundColor = colors[colorIndex];
     colorIndex = (colorIndex + 1) % colors.length;
     console.log(colorIndex);
-});
-console.log(colorIndex);
 
-const currentWidth = document.getElementById("circle").offsetWidth;
-console.log(currentWidth);
+    currentHeight = currentHeight + 10;
+    currentWidth = currentWidth + 10;
+    circle.style.width = currentWidth + "px";
+    circle.style.height = currentHeight + "px";
+    console.log(currentWidth);
+    console.log(currentHeight);
+});
+
+const mouse = document.getElementById("circle");
+mouse.addEventListener("mouseleave", function() {
+    
+    circle.style.backgroundColor = colors[colorIndex];
+    colorIndex = Math.abs((colorIndex - 1) % colors.length);
+    console.log(colorIndex);
+
+    currentHeight = currentHeight - 5;
+    currentWidth = currentWidth - 5;
+    circle.style.width = currentWidth + "px";
+    circle.style.height = currentHeight + "px";
+    console.log(currentWidth);
+    console.log(currentHeight);
+});
+
 
 
 //let circleWidth = document.querySelector("circle");
