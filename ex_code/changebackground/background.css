@@ -13,7 +13,7 @@ button {
     font-size: 1.4em;
     padding: 1em 2em;
     border-radius: 2em;
-    border: 5px solid #ffffff;
+    border: 5px solid rgb(255, 255, 255);
     background-color: transparent;
     color: #ffffff;
     letter-spacing: 1.5px;
